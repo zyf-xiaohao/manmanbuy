@@ -1,0 +1,236 @@
+@import "base.less";
+#main {
+    background: rgb(242, 242, 242);
+    width: 100%;
+    .container {
+        background-color: #fff;
+        margin-top: 10px;
+        #commodityInfo {
+            padding: 0px 20px;
+            .pic {
+                text-align: center;
+                >a {
+                    display: block;
+                    >img {
+                        width: 201px;
+                        height: 201px;
+                    }
+                }
+            }
+            .info {
+                color: #999999;
+                font-size: 12px;
+                .mall {}
+                .addtime {}
+                .author {
+                    >a {}
+                }
+            }
+            .title {
+                margin: 10px 0px;
+                color: #5a5a5a;
+                font-size: 18px;
+            }
+            .subtitle {
+                margin: 10px 0px;
+                color: #f85000;
+                font-size: 16px;
+            }
+            .golink {
+                text-align: center;
+                margin: 20px 0px;
+                >a {
+                    display: block;
+                    width: 180px;
+                    height: 40px;
+                    line-height: 40px;
+                    background-color: #FF9000;
+                    border-radius: 5px;
+                    color: white;
+                }
+            }
+            .particulars {
+                >p {
+                    color: black;
+                    >a {
+                        color: @main-color;
+                    }
+                    >img {
+                        width: 335px;
+                        height: 335px;
+                    }
+                }
+            }
+        }
+        #conmment {
+            #newcomment {
+                line-height: 50px;
+                background: rgb(242, 242, 242);
+                color: black;
+                font-weight: 600;
+                padding-left: 5px;
+            }
+            .list {
+                background-color: #fff;
+                ul {
+                    margin: 5px 0px;
+                    >li {
+                        display: flex;
+                        margin: 5px 5px;
+                        overflow: hidden;
+                        .userimg {
+                            float: left;
+                            text-align: center;
+                            width: 40px;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            /*定义body的元素垂直居中*/
+                            justify-content: center;
+                            /*定义body的里的元素水平居中*/
+                            >img {
+                               
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                            }
+                        }
+                        .con {
+                            flex: 1;
+                            float: right;
+                            .name {
+                                overflow: hidden;
+                                margin: 10px 5px;
+                                font-size: 13px;
+                                .username {
+                                    float: left;
+                                   color: #999;
+                                }
+                                .time {
+                                    float: right;
+                                    color: #999;
+                                }
+                            }
+                            .content {
+                                line-height: 30px;
+                                margin: 0px 5px;
+                                color: #333;
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            .app{
+                line-height: 50px;
+                text-align: center;
+                >a{
+                    color:#4682c5;
+                }
+            }
+        }
+        #hot {
+            .title {
+                background-color: rgb(242, 242, 242);
+                line-height: 50px;
+                >p {
+                    color: black;
+                    font-size: 16px;
+                    padding-left: 15px;
+                    font-weight: 600;
+                }
+            }
+            .container {
+                >li {
+                    padding: 14px 8px;
+                    >a {
+                        display: block;
+                        width: 100%;
+                        height: 100px;
+                        display: flex;
+                        .pic {
+                            float: left;
+                            >img {
+                                width: 100px;
+                                height: 100px;
+                            }
+                        }
+                        .introduce {
+                            flex: 1;
+                            float: right;
+                            .title {
+                                background-color: #fff;
+                                color: #333333;
+                                font-size: 15px;
+                                line-height: 24px;
+                                >span {
+                                    color: #ff6c00
+                                }
+                            }
+                            .info {
+                                color: #a1a1a1;
+                                font-size: 12px;
+                                line-height: 50px;
+                                .mall {
+                                    float: left;
+                                }
+                                .comment {
+                                    float: right;
+                                    .fa-commenting-o {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footerAdd{
+    height: 400px;
+    .container{
+        background-color: rgb(67, 67, 67);
+        padding: 15px;
+        #Div1{
+            position: relative;
+            display: flex;
+            .applogo{
+                float: left;
+                margin-right: 15px;
+                   >img{
+                       width: 60px;
+                       height: 60px;
+                     
+                   } 
+            }
+            .tit{
+                flex:1;
+                float:right;
+                color: #fff;
+                
+                .subtit{
+                    >p{
+                        color: #fff;
+                        margin-top: 20px;
+                    }
+                }
+            }
+            .btn{
+                position: absolute;
+                text-align: center;
+                right: 5px;
+                bottom: 40px;
+                >a{
+                    display: block;
+                    background-color: rgb(109, 177, 16);
+                    width: 100px;
+                   color: #fff;
+                    line-height: 30px;
+                    height: 30px;
+                    border-radius:  5px;
+                }
+            }
+        }
+    }
+}

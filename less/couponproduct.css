@@ -1,0 +1,238 @@
+/* 公共变量 */
+/* 样式重置 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /*在移动端设置盒模型border-box 为了防止元素加边框或者padding出现水平滚动条*/
+  box-sizing: border-box;
+  /* 去除移动端按住元素的时候会出现高亮背景色 */
+  -webkit-tap-highlight-color: transparent;
+  /* 去掉所有移动端内边框 */
+  outline: none;
+}
+a {
+  color: #5a5a5a;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+input {
+  border: 0;
+}
+img {
+  /* 解决图片底部3px的间隙 为了让图片的对齐方式和文本一致*/
+  vertical-align: middle;
+}
+i {
+  font-style: normal;
+}
+/* 公共样式 */
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+h4 {
+  margin: 0;
+}
+/* 头部区域 */
+#header {
+  background-color: #f4483e;
+  height: 43px;
+  position: relative;
+}
+#header .fa-angle-left {
+  display: block;
+  color: #fff;
+  position: absolute;
+  font-size: 30px;
+  left: 0;
+  top: 0;
+  width: 40px;
+  line-height: 43px;
+  text-align: center;
+}
+#header > h4 {
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+  line-height: 43px;
+}
+#header > a {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+#header > a > img {
+  width: 34px;
+  height: 34px;
+}
+/* 底部区域 */
+#footer {
+  background-color: #fff;
+}
+#footer .title {
+  background-color: #efefef;
+  border-top: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+  height: 34px;
+  line-height: 34px;
+  margin-top: 25px;
+}
+#footer .title ul {
+  display: flex;
+}
+#footer .title ul > li {
+  width: 40%;
+}
+#footer .title ul > li + li {
+  border-left: 1px solid #c4c4c4;
+}
+#footer .title ul > li > a {
+  font-size: 14px;
+  display: block;
+  text-align: center;
+}
+#footer .title ul > li > a .fa-arrow-up {
+  font-size: 16px;
+}
+#footer .content {
+  text-align: center;
+  font-size: 12px;
+  padding: 15px 0;
+  color: #5a5a5a;
+  background-color: #efefef;
+}
+#footer .content .mobile-app {
+  color: #f4483e;
+  font-weight: bold;
+}
+#footer .content .slowly-buy {
+  color: #000;
+  font-weight: bold;
+}
+#footer .content > p {
+  font-weight: bold;
+}
+/* 肯德基优惠券页面 */
+/* 主体区域部分 */
+#main {
+  background-color: #fff;
+}
+#main .title {
+  font-size: 14px;
+  text-align: center;
+  color: #999;
+  padding: 6px 0px;
+}
+#main .coupon-list > ul > li {
+  display: flex;
+}
+#main .coupon-list > ul > li .left > img {
+  width: 100px;
+  height: 100px;
+  max-width: 100px;
+  margin-right: 0;
+}
+#main .coupon-list > ul > li .right {
+  flex: 1;
+  margin-left: 0;
+}
+#main .coupon-list > ul > li .right .product-name > p {
+  white-space: normal;
+  color: #000;
+}
+#main .coupon-list > ul > li .right .product-price {
+  color: #d10311;
+  font-weight: bold;
+  margin-top: 10px;
+}
+#main .coupon-list > ul > li .right .product-info {
+  color: #ff841d;
+  font-size: 12px;
+  line-height: 40px;
+}
+#main .coupon-list > ul > li .right .product-info > span {
+  line-height: 40px;
+}
+#main .coupon-list > ul > li .mui-navigate-right {
+  font-size: 30px;
+}
+html,
+body {
+  height: 100%;
+  padding: 0;
+}
+/* 遮罩层和轮播图大盒子 */
+.bigSwiper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 998;
+  /* 遮罩层 */
+  /* 轮播图大盒子 */
+}
+.bigSwiper .mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0.4;
+  background-color: #000;
+}
+.bigSwiper .bigbox {
+  width: 300px;
+  height: 200px;
+}
+.bigSwiper .bigbox .box {
+  height: 100%;
+  position: relative;
+  top: 50%;
+  left: 60%;
+  transform: translateX(-50%);
+}
+.bigSwiper .bigbox .box .swiper-container {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  /* 下一页 */
+  /* 上一页 */
+}
+.bigSwiper .bigbox .box .swiper-container .swiper-wrapper .swiper-slide {
+  width: 160px;
+  height: 160px;
+}
+.bigSwiper .bigbox .box .swiper-container .swiper-wrapper .swiper-slide > img {
+  margin-top: 50px;
+  width: 160px;
+  height: 160px;
+}
+.bigSwiper .bigbox .box .swiper-container .swiper-button-next {
+  width: 40px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.bigSwiper .bigbox .box .swiper-container .swiper-button-prev {
+  width: 40px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.bigSwiper .close {
+  font-size: 30px;
+  opacity: .1;
+  position: absolute;
+  top: 155px;
+  right: 116px;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>慢慢买首页</title>
+		<!-- 导入bootstrap.css -->
+		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+		<!-- 引入less -->
+		<link rel="stylesheet/less" href="less/index.less">
+		<!-- 引入编译包 -->
+		<script src="lib/less/less.js"></script>
+		<!-- 引入字体图标 -->
+		<link rel="stylesheet" href="lib/fontAwesome/iconfont.css" />
+		<script>
+			// 添加一个resize事件屏幕宽度变化马上计算和设置
+			window.addEventListener('resize', setHtmlFontSize);
+			setHtmlFontSize();
+
+			function setHtmlFontSize() {
+				// 获取当前的屏幕的宽度
+				var windowWidth = document.documentElement.offsetWidth;
+				// 以标准的375屏幕 根元素100px的标准  需要3.75rem占满整屏的值 作为参照点
+				var htmlFontSize = windowWidth / 3.75;
+				//给最大值 超过了200px默认为200px
+				if(htmlFontSize > 200) {
+					htmlFontSize = 200;
+				}
+				// 把当前根元素的字体大小设置给当前html的fontSize 注意要带单位
+				document.querySelector('html').style.fontSize = htmlFontSize + 'px';
+			}
+		</script>
+	</head>
+
+	<body>
+		<!-- 头部区域 -->
+		<header id="indexHeader">
+			<a href="index.html" class="logo" title="慢慢买比价网--手机版">
+				<img src="https://img.alicdn.com/imgextra/i1/690311/TB2cMR0aQUmBKNjSZFOXXab2XXa_!!690311.png" alt="慢慢买比价网--手机版"></a>
+			<a href="#" class="download" title="手机app下载">
+				<img src="https://img.alicdn.com/imgextra/i2/690311/TB2beKvaTXYBeNkHFrdXXciuVXa_!!690311.png" alt="手机app下载"></a>
+		</header>
+		<!-- 搜索区域 -->
+		<section id="search">
+			<form action="" method="get">
+				<input class="article" type="search" placeholder="请输入你要搜索的商品" />
+				<input class="button" type="submit" value="搜索" />
+			</form>
+		</section>
+		<!-- 导航区域 -->
+		<nav id="nav">
+			<div class="row"></div>
+		</nav>
+		<!-- 主体区域 -->
+		<main id="main">
+			<div class="title">
+				<h4>超值折扣推荐</h4>
+				<a href="inlanddiscount.html">
+					<img src="http://www.zuyushop.com/wap/images/more.png" />
+				</a>
+			</div>
+
+			<div class="media">
+				<div class="media-left media-middle">
+					<a href="#">
+						<img class="media-object" src="http://img2017.manmanbuy.com/Thumb_2018090010152054785.png" alt="...">
+					</a>
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading">美特斯邦威 男撞色拼接棒球服夹克 224250&nbsp;<span>77.7元包邮（1件3折后）</span></h4>
+					<div class="other">
+						<span class="mall">
+							天猫商城 | 09-29 10:36
+						</span>
+						<span class="comment">
+							<i class="iconfont icon-xinxikongxin"></i>0
+						</span>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<!-- 底部区域 -->
+		<footer id="footer">
+			<div class="more_bar clearfix">
+				<a href="moneyctrl.html">更多优惠信息 »</a>
+			</div>
+			<div class="title">
+				<h4>超值折扣推荐</h4>
+				<img src="http://www.zuyushop.com/wap/images/more.png">
+			</div>
+			<div class="row">
+				<div class="col-xs-4 col-md-4">
+					<a href="#">登录</a>
+				</div>
+				<div class="col-xs-4 col-md-4">
+					<a href="#">注册</a>
+				</div>
+				<div class="col-xs-4 col-md-4">
+					<a href="#header">
+						<i class="iconfont icon-shangjiantou"></i>返回顶部</a>
+				</div>
+			</div>
+			<div class="footer-f">
+				<p>
+					<a href="#" onclick="trackEvent('footer下载');" style="color: Red;">手机APP下载</a>
+					<a href="#">
+						慢慢买手机版</a> -- 掌上比价平台</p>
+				<p class="url">
+					m.manmanbuy.com
+					<img src="https://c.cnzz.com/wapstat.php?siteid=1256699064&amp;r=http%3a%2f%2fm.manmanbuy.com%2fcuxiao.aspx&amp;rnd=732656290" width="0" height="0">
+				</p>
+			</div>
+		</footer>
+		<!-- 引入zepto -->
+		<script src="lib/zepto/zepto.min.js"></script>
+		<!-- 引入bootstrap.js -->
+		<script src="lib/bootstrap/js/bootstrap.js"></script>
+		<!-- 引入模板引擎 -->
+		<script src="lib/artTemplate/template-web.js"></script>
+		<!-- 引入自己的js -->
+		<script src="js/index.js"></script>
+		<script type="text/html" id="indexNavTmp">
+			{{each result as value i}}
+			<div class="col-xs-3 col-md-3">
+				<a href="{{value.titlehref}}">
+					{{@value.img}}
+					<p>{{value.name}}</p>
+				</a>
+			</div>
+			{{/each}}
+		</script>
+		<script type="text/html" id="mainTmp">
+			{{each result as value i}}
+			<div class="media">
+				<div class="media-left media-middle">
+					<a href="#">
+						{{@value.productImgSm}}
+					</a>
+				</div>
+				<div class="media-body">
+					<h4 class="media-heading">{{value.productName}}&nbsp;<span>{{value.productPinkage}}</span></h4>
+					<div class="other">
+						<span class="mall">
+							{{value.productFrom}} | {{value.productTime}}
+						</span>
+						<span class="comment">
+							<i class="iconfont icon-xinxikongxin"></i>{{value.productComCount.replace('有','').replace('人评论','')}}
+						</span>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+		</script>
+
+	</body>
+
+</html>

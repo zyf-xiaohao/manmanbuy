@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 加视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠券页面</title>
+    <!-- 1.导入字体图标 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 2.导入自己写的less文件 -->
+    <link rel="stylesheet/less" href="less/coupon.less">
+    <!-- 3.引入less.js的编译器文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <!-- 图标栏 -->
+        <a href="index.html" class="fa fa-angle-left"></a>
+        <!-- 优惠券 -->
+        <h4>优惠券</h4>
+        <!-- APP下载 -->
+        <a href="#">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+    <!-- 主体部分区域 -->
+    <main id="main">
+        <ul class="plist">
+            <!-- <li>
+                <a href="#">
+                    <img src="https://images.looquan.com/Uploads/201407/kfc.jpg.jpg" alt="">
+                    <p>肯德基</p>
+                </a>
+            </li> -->
+        </ul>
+    </main>
+    <!-- 导航栏区域 -->
+    <section id="nav">
+        <a href="index.html" class="home">首页</a>>
+        <a href="#" class="coupon">优惠券</a>
+    </section>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <!-- 标题 -->
+        <div class="title">
+            <ul>
+                <li>
+                    <a href="#" class="login">登录</a>
+                </li>
+                <li>
+                    <a href="#" class="register">注册</a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-up"></i>返回顶部
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 内容 -->
+        <div class="content">
+            <p>
+                <a href="#" class="mobile-app">手机APP下载</a>
+                <a href="#" class="slowly-buy">慢慢买手机版</a>-- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+
+    <!-- 准备模板 -->
+    <script type="text/html" id="couponTpl">
+        {{each result as value i}}
+                  <li>
+                      <a href="{{value.couponLink}}?couponid={{value.couponId}}"><img src="{{value.couponImg}}" alt="">
+                        <br>{{value.couponTitle}}</a>
+                  </li>
+        {{/each}}
+    </script>
+
+    <!-- 1.导入zepto.js文件 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 2.导入模板文件 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 3.导入自己写的js文件 -->
+    <script src="js/coupon.js"></script>
+</body>
+
+</html>

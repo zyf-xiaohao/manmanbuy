@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>品牌大全</title>
+	 <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/font/iconfont.css">
+    <link rel="stylesheet/less" href="less/top10.less">
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<header id="header">
+		<div class="title">
+			<div class="logo">
+				<a href="#">
+					<img src="https://img.alicdn.com/imgextra/i1/690311/TB2cMR0aQUmBKNjSZFOXXab2XXa_!!690311.png" alt="慢慢买手机版">
+				</a>
+			</div>
+			<div class="appdown">
+				<a href="#">
+					<img src="https://img.alicdn.com/imgextra/i2/690311/TB2beKvaTXYBeNkHFrdXXciuVXa_!!690311.png" alt="手机app下载">
+				</a>
+			</div>
+		</div>
+		<form action="#">
+			<input class="searchtxt" value="" name="key" type="search" placeholder="请输入你想比价的商品">
+			<input class="searchbtn" type="submit" value="搜索">
+		</form>
+	</header>
+	<!-- 主体 -->
+	<main id="main">
+		<div class="nav">
+			<a href="index.html">首页</a>
+			<a href="top10.html">> 品牌大全</a>
+		</div>
+		<div class="content">
+			<div class="title">热门品牌排行</div>
+			<ul>
+				<li>
+					<a href="#">
+						<span>平板电视十大品牌</span>
+						<i class="icon iconfont icon-jiantouarrow483"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</main>
+	<!-- 底部 -->
+	<footer id="footer">
+		<div class="foot_top">            
+         <a href="#">登录</a> 
+         <a href="#">注册</a> 
+         <a href="#"><img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">返回顶部</a>
+      </div>
+      <div class="footer">
+         <p>
+            <a href="http://m.manmanbuy.com/app.html?type=footword&amp;value=wap" onclick="trackEvent('footer下载');" style="color: Red;">手机APP下载</a><a href="http://m.manmanbuy.com">慢慢买手机版</a> -- 掌上比价平台</p>
+         <p>m.manmanbuy.com<img src="http://c.cnzz.com/wapstat.php?siteid=1256699064&amp;r=http%3a%2f%2fm.manmanbuy.com%2fdistop.aspx%3fid%3d4&amp;rnd=988838725" width="0" height="0">
+         </p>
+      </div>
+	</footer>
+
+	<script src="lib/zepto/zepto.min.js"></script>
+   <script src="lib/mui/js/mui.min.js"></script>
+   <script src="js/top10.js"></script>
+   <script src="lib/artTemplate/template-web.js"></script>
+   <script type='text/html' id="contpl">
+   	<% for(var i = 0; i < result.length; i++){ %>
+   	<li>
+			<a href="distop.html?id=<%- result[i].brandTitleId %>">
+				<span><%- result[i].brandTitle %></span>
+				<i class="icon iconfont icon-jiantouarrow483"></i>
+			</a>
+		</li>
+		<% } %>
+   </script>
+</body>
+</html>

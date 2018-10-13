@@ -1,0 +1,131 @@
+@import 'base.less';
+.layout {
+    #main {
+        /* 搜索框部分*/
+        .search {
+            display: flex;
+            padding: 10px;
+            background-color: #fff;
+            input {
+                flex: 1;
+                height: 30px;
+                margin-bottom: 0;
+                text-align: left;
+                border-radius: 20px;
+                background-color: #f1f1f1;
+            }
+            button {
+                width: 63px;
+                height: 30px;
+                border-radius: 20px;
+                background-color: @main-color;
+                color: #fff;
+                font-size: 16px;
+                line-height: 30px;
+                padding: 0;
+            }
+        }
+        /* 内容区域*/
+        .product-content {
+            .content-title {
+                padding: 5px;
+                background-color: #f2f2f2;
+                a {
+                    float: left;
+                    color: #000;
+                    line-height: 33px;
+                    font-size: 15px;
+                }
+            }
+            .display {
+                position: relative;
+                padding: 20px 10px;
+                .product {
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                .collect {
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                    width: 39px;
+                }
+                h4 {
+                    font-weight: normal;
+                    font-size: 15px;
+                    line-height: 20px;
+                }
+                p {
+                    display: flex;
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                    span {
+                        flex: 1;
+                    }
+                }
+            }
+            .options {
+                .mui-content {
+                    #segmentedControl {
+                        border: 1px solid #000;
+                        a {
+                            background-color: #ffc525;
+                            color: #fff;
+                            &.mui-active {
+                                background-color: #ff9b19;
+                            }
+                        }
+                    }
+                    #item1 {
+                        .mui-table-view-cell {
+                            a{
+                                display: flex;
+                                justify-content: space-between;
+                                padding-right: 50px;
+                                position: relative;
+                                .name,p {
+                                    font-size: 14px;
+                                    line-height: 30px;
+                                }
+                                .price {
+                                    color: red;
+                                }
+                                &::after {
+                                    content: '>';
+                                    position: absolute;
+                                    right: 20px;
+                                    top: 40%;
+                                }
+                            }
+                        }
+                    }
+                    #item3 {
+                        .mui-table-view-cell {
+                            .comment-title {
+                                .mui-pull-left {
+                                    text-align: left;
+                                }
+                                .mui-pull-right {
+                                    .time {
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                            .comment {
+                                font-size: 13px;
+                                line-height: 22px;
+                            }
+                        }
+                        .more {
+                            button {
+                                width: 100%;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

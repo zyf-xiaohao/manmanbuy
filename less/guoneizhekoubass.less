@@ -1,0 +1,257 @@
+@main-color: #ff841d;
+@border-color: #ddd;
+@a-color: #666;
+// html{
+//     font-size: 100px;
+// }
+// body{
+//     font-size: 0.16rem;
+// }
+// 为了导航弹簧
+html {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+}
+
+/* 样式重置 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /*在移动端设置盒模型border-box 为了防止元素加边框或者padding出现水平滚动条*/
+    box-sizing: border-box;
+    /* 去除移动端按住元素的时候会出现高亮背景色 */
+    -webkit-tap-highlight-color: transparent;
+    /* 去掉所有移动端内边框 */
+    outline: none;
+}
+
+a {
+    color: @a-color;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    border: 0;
+}
+
+img {
+    /* 解决图片底部3px的间隙 为了让图片的对齐方式和文本一致*/
+    vertical-align: middle;
+}
+
+i {
+    font-style: normal;
+}
+
+// 头部+导航
+#header {
+    margin: 0 auto;
+    background: #fff;
+    width: 100%;
+    height: 85px;
+    overflow: hidden; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    // 头部
+    #header-box {
+        width: 100%;
+        height: 44px;
+        padding: 9px 10px;
+        border-bottom: 1px solid @border-color;
+        #logo {
+            float: left;
+            display: block;
+            width: 83px;
+            height: 25px;
+            margin-top: 1px;
+            >img {
+                display: block;
+                width: 83px;
+                height: 25px;
+            }
+        }
+        #searchbox {
+            float: left;
+            position: relative;
+            background-color: #f9f9f9;
+            border-radius: 100px;
+            margin-top: -2px;
+            margin-left: 18px;
+            >form {
+                width: 200px;
+                height: 30px;
+                .fa-search {
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    font-size: 14px;
+                    top: 50%;
+                    left: 10px;
+                    margin-top: -7px;
+                    color: #c8c8c8
+                }
+                >input {
+                    position: absolute;
+                    top: 0;
+                    left: 24px;
+                    font-size: 14px;
+                    width: 60%;
+                    height: 16px;
+                    margin-top: 6px;
+                    background-color: #f9f9f9;
+                }
+            }
+        }
+        #download {
+            float: left;
+            display: block;
+            border: 1px solid #f04848;
+            width: 38px;
+            height: 20px;
+            line-height: 20px;
+            border-radius: 10px;
+            font-size: 11px;
+            text-align: center;
+            color: #f85000;
+            margin-top: 2px;
+            margin-left: 15px;
+        }
+    } // 导航弹簧
+    #header-tab {
+        width: 100%;
+        height: 41px;
+        // border-bottom: 1px solid #e0e4e7;
+        .swiper-container {
+            width: 100%;
+            .swiper-slide {
+                width: auto;
+                ul {
+                    height: 40px;
+                    >li {
+                        position: relative;
+                        line-height: 40px;
+                        float: left;
+                        padding: 0 12px;
+                        width: 100px;
+                        white-space: nowrap;
+                        &:nth-of-type(1) {
+                            width: 54px;
+                        }
+                        &:nth-of-type(2),
+                        &:nth-of-type(6) {
+                            width: 69px;
+                        }
+                        &:nth-of-type(3),
+                        &:nth-of-type(4),
+                        &:nth-of-type(5) {
+                            width: 84px;
+                        }
+                        &:nth-of-type(7) {
+                            width: 99px;
+                        }
+                        >a {
+                            font-size: 15px;
+                            color: #333;
+                            font-weight: 700;
+                        }
+                        &.active {
+                            >a {
+                                background-color: #fff;
+                                color: #f85000;
+                                &::before {
+                                    content: "";
+                                    display: block;
+                                    width: 25px;
+                                    height: 4px;
+                                    background: #f85000;
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 50%;
+                                    margin-left: -12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 菜单区域
+#menu {
+    height: 36px;
+    background-color: #ebebeb;
+    background-image: linear-gradient(to bottom, #fff, #ebebeb);
+    border-top: solid 1px #ebebeb;
+    border-bottom: 1px solid #ccc;
+    line-height: 36px;
+    padding-left: 8px;
+    font-size: 14px;
+    margin-top: 20px;
+    >a {
+        color: #000;
+    }
+}
+
+// 底部区域
+#footer {
+    #footers {
+        background: #efefef;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        height: 34px;
+        line-height: 34px;
+        margin-top: 25px;
+        clear: both;
+        >a {
+            box-sizing: border-box;
+            float: left;
+            font-size: 14px;
+            border-right: 1px solid #c4c4c4;
+            text-align: center;
+            width: 30%;
+            color: #000;
+            &:nth-of-type(3) {
+                border-right: none;
+                width: 40%;
+                >img {
+                    width: 15px;
+                    height: 15px;
+                    vertical-align: middle;
+                    margin-top: -5px;
+                    margin-right: 2px;
+                }
+            }
+        }
+    }
+    #footerx {
+        background: #efefef;
+        text-align: center;
+        font-size: 12px;
+        padding: 15px 0;
+        color: #666;
+        >p {
+            margin-bottom: 0px;
+            >a {
+                &:first-child {
+                    color: red;
+                }
+                &:last-child {
+                    color: #000;
+                }
+            }
+        }
+
+    }
+}

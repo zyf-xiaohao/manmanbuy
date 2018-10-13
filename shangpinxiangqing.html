@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/shangpinxiangqing.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <a href="index.html" class="logo">
+            <img src="./images/header_logo.png" alt="">
+        </a>
+        <a href="javascript:void(0)" class="app-logo">
+            <img src="./images/header_app.png" alt="">
+        </a>
+    </header>
+    <section id="search">
+        <div class="search">
+            <input type="search" placeholder="请输入你想比价的商品" class="search-text">
+            <input type="button" value="搜索" class="search-btn">
+        </div>
+    </section>
+    <section id="details">
+        <a href="index.html">首页</a> >
+        <a href="javascript:void(0)">平板电脑</a> >
+        <a href="javascript:void(0)">GTX 1080 </a>
+    </section>
+    <main id="main">
+
+    </main>
+
+
+    <main id="main">
+        <div class="pic">
+            <img src="http://pro-img.zuyushop.com/ProPic/20173/Thumb/Thumb_2017030009061421571.jpg" alt="">
+        </div>
+        <div class="info">
+            索尼(Sony) KD-100Z9D 100英寸 支持3D 4K超高清HDR智能网络电视
+        </div>
+        <div class="info1">
+            <span>当前最低 : </span>
+            <span class="lostestPrice"> ¥499999.00 </span>
+            <span>优选评论 : </span>
+            <span class="commentsNum"> 2条</span>
+        </div>
+    </main>
+    <section id="btns">
+        <a href="javascript:void(0)">比价购买
+            <img src="http://www.zuyushop.com/wap/images/tab_ar.png" alt="">
+        </a>
+        <a href="javascript:void(0)">产品参数</a>
+        <a href="javascript:void(0)">优选评价</a>
+    </section>
+    <section id="price">
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <td rowspan="2" class="p_pic" valign="top">
+                        <a href="redirect.aspx?webid=1&amp;bjid=200602351&amp;tourl=http://item.jd.com/2009814.html&amp;y=bijia" target="_blank" onclick="trackLog('商品购买','比价页面');">
+                            <img src="http://sf.manmanbuy.com/images/sitelogo/1.png">
+                        </a>
+                    </td>
+                    <td>
+                        <a href="redirect.aspx?webid=1&amp;bjid=200602351&amp;tourl=http://item.jd.com/2009814.html&amp;y=bijia" target="_blank" onclick="trackLog('商品购买','比价页面');">京东商城</a>
+                    </td>
+                    <td class="red"> ￥3266.00 </td>
+                    <td align="center" width="60">
+                        <span style=
+                            "display: inline-block;width: 56px;height: 24px;border-radius: 6px;text-align: center;line-height: 24px;background-color: javascript:void(0)ff5500;color: javascript:void(0)fff;font-size: 14px;">去购买</span>
+                    </td>
+                </tr>
+                <tr class="tab2">
+                    <td> </td>
+                    <td class="r"> </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="tip">
+        <p>
+                * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </p>
+    </section>
+    <section id="comments">
+        <h5>优选网友评价</h5>
+        <div class="comment-box">
+                <div class="comment-time clearfix">
+                        <span class="mui-pull-left">00***0</span>
+                        <span class="mui-pull-right">2017/5/6</span>
+                    </div>
+                    
+                    <div class="buyFrom">
+                        <div class="stars"></div>
+                        <p class="">购买自 : <span>京东商城</span></p>
+                    </div>
+                    <div class="comment">品牌质优，大赞，屏幕效果最优秀了，支持下 </div>
+                   <div class="border">
+                        <div class="response">
+                                <p>回复</p>
+                            </div>
+                   </div>
+        </div>
+        
+        <div class="moreComments">
+            <a href="javascript:void(0)">查看更多评价</a>
+        </div>
+    </section>
+    <section id="tools">
+        <ul>
+            <li>
+                <a href="javascript:void(0)" class="login">登录</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="register">注册</a>
+            </li>
+            <li>
+                <a href="#header" class="rebackTop">
+                    <i class="fa fa-arrow-up"></i> 返回顶部</a>
+            </li>
+        </ul>
+    </section>
+    <footer id="footer">
+        <div>
+            <a href="javascript:void(0)">手机app下载</a>
+            <span>慢慢买手机版 -- 掌上比价平台</span>
+        </div>
+        <p>m.manmanbuy.com</p>
+    </footer>
+
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/shangpinxiangqing.js"></script>
+    <script type="text/html" id="tpl-comment">
+        {{each result value}}
+        <div class="comment-time clearfix">
+                <span class="mui-pull-left">{{value.comName}}</span>
+                <span class="mui-pull-right">{{value.comTime}}</span>
+            </div>
+        
+            <div class="buyFrom">
+                <div class="stars"></div>
+                <p class="">{{value.comFrom}}</p>
+            </div>
+            <div class="comment">{{value.comContent}}</div>
+            <div class="border">
+                <div class="response">
+                    <p>回复</p>
+                </div>
+            </div>
+        {{ /each }}
+    </script>
+</body>
+
+</html>

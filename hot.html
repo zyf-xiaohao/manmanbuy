@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>超级人气榜--慢慢买白菜价</title>
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="lib/font/iconfont.css">
+    <link rel="stylesheet" href="css/hot.css">
+    <!-- <link rel="stylesheet/less" href="less/hot.less">
+    <script src="lib/less/less.js"></script> -->
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header">
+        <a href="baicaijia.html" class="main-back">
+            <i class="icon iconfont icon-jiantou-copy" aria-hidden="true"></i>
+        </a>
+        <div class="menu-detail">
+            <span>超级人气榜</span>
+        </div>
+        <a href="baicaijia.html" class="main-home">
+            <i class="icon iconfont icon-fangzi" aria-hidden="true"></i>
+        </a>
+    </header>
+    <!-- 主体 -->
+    <main id="main">
+        <ul class="clearfix">
+            <li class="item">
+                <a href="http://m.manmanbuy.com/tbdetail.aspx?itemid=575195344428" class="go"></a>
+                <div class="cover">
+                    <span class="today">精选</span>
+                    <img src="https://img.alicdn.com/bao/uploaded/i1/2075600926/TB2wx8Pr8jTBKNjSZFuXXb0HFXa_!!2075600926-0-item_pic.jpg_430x430q90.jpg">
+                </div>
+                <div class="title">
+                    MIQIER 米琦尔 2件特惠装 儿童纯棉短袖T恤
+                </div>
+                <div class="info">
+                    <i>券后</i><em>¥</em>10.0
+                    <del>¥25</del>
+                    <div class="sold">
+                        <div class="bar clearfix">
+                            <a href="http://shop.m.taobao.com/shop/coupon.htm?activityId=27a14c9fc6bb4a48b917d567fcf8f664&sellerId=2246833798" class="goquan" target="_blank"></a>
+                            <i><em style="width:1%;"></em><span>1%</span></i>
+                            <b>已领82张</b>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </main>
+    <!-- 置顶 -->
+    <a id="gotop" href="javascript:;" style="display: none;">
+        <i class="icon iconfont icon-zhiding"></i>
+    </a>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <script src="js/hot.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script type="text/html" id="mainContpl">
+        <% for(var i = 2; i < result.length; i++){ %>
+            <li class="item">
+                <a href="http://m.manmanbuy.com/tbdetail.aspx?itemid=575195344428" class="go"></a>
+                <div class="cover">
+                  <% if(i<8){ %>
+                  <span class="today">精选</span>
+                  <% }else if(i<14){ %>
+                  <span class="today">好货</span>
+                  <% }else{ %>
+                  <span class="today">卷 ￥15</span>
+                  <% } %>
+                  <%- result[i].productImg %>
+                  <img class='lazyLoading' src="images/懒加载.gif">
+                </div>
+                <div class="title">
+                    <%- result[i].productName %>
+                </div>
+                <div class="info">
+                  <%- result[i].productPrice %>
+                  <div class="sold">
+                  <div class="bar clearfix">
+                  <a href="shangpinxiangqing.html?productId=<%- result[i].productId %>&category=0" class="goqutarget=" _blank "></a><i><em style="width:1%; "></em><span>1%></i><b>已领82张</b></div>
+                </div>
+              </div>
+          </li>
+        <% } %>
+    </script>
+</body>
+
+</html>

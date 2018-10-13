@@ -1,0 +1,145 @@
+@import "base2.less";
+
+/* 头部样式 */
+
+#header {
+    .icon-logo {
+        flex: 1;
+        padding: 12px;
+        >img {
+            max-height: 25px;
+            max-width: 185px;
+        }
+    }
+}
+
+
+/* 搜索样式 */
+
+#form {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    >form {
+        width: 100%;
+        position: relative;
+        >input {
+            width: 100%;
+            height: 30px;
+            border-radius: 15px;
+            text-align: left;
+            margin: 0;
+            padding: 0 20px;
+        }
+        >button {
+            font-size: 16px;
+            border-radius: 15px;
+            height: 30px;
+            line-height: 30px;
+            width: 63px;
+            background-color: @main-color;
+            padding: 0;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+#introduce {
+    padding: 10px;
+    >h4 {
+        padding: 10px;
+        margin: 0;
+    }
+    .text {
+        color: #666;
+        font-size: 12px;
+        padding: 10px;
+        line-height: 20px;
+        background-color: #fff;
+    }
+    .recommend {
+        background-color: #f7f7f7;
+        margin-top: 10px;
+        font-size: 12px;
+        padding: 10px;
+        color: #999;
+    }
+}
+
+
+/* 商品列表区域样式 */
+
+#commodity {
+    .nav {
+        padding: 0 8px;
+        background-color: #fff;
+        >ul {
+            display: flex;
+            >li {
+                flex: 1;
+                font-size: 14px;
+                line-height: 40px;
+                text-align: center;
+                color: #5a5a5a;
+                &.action {
+                    color: red;
+                }
+            }
+        }
+    }
+    .content {
+        .mui-table-view {
+            &::before {
+                height: 0;
+            }
+            >li {
+                padding: 10px 8px;
+                font-size: 12px;
+                &::after {
+                    left: 0px;
+                }
+                >a {
+                    margin: 0px;
+                    padding: 0px;
+                    .mui-media-object {
+                        width: 120px;
+                        height: 120px;
+                        max-width: 120px;
+                        max-height: 120px;
+                        >img {
+                            width: 120px;
+                            height: 120px;
+                        }
+                    }
+                    .mui-media-body {
+                        white-space: normal;
+                        .tit {
+                            color: #333;
+                            word-break: break-all;
+                            font-size: 15px;
+                            line-height: 28px;
+                            height: 56px;
+                            -webkit-line-clamp: 2;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                        }
+                        .price {
+                            color: red;
+                            font-size: 18px;
+                            margin-top: 8px;
+                        }
+                        .mui-ellipsis {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

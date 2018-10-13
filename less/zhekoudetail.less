@@ -1,0 +1,136 @@
+@import "guoneizhekoubass.less";
+#main {
+    margin: 0px auto;
+    margin-top: 95px;
+    width: 100%;
+    overflow: hidden;
+    // 商品区
+    #goods {
+        padding: 4px 10px;
+        background: #FFFFFF;
+        >h3 {
+            font-size: 18px;
+            margin: 10px auto 5px auto;
+            font-weight: 800; // text-align: left;
+            // text-align-last: left;
+            // word-break: break-all;
+            color: #5a5a5a;
+            line-height: normal;
+        }
+        >h4 {
+            color: #ff6c00;
+            display: block;
+            font-size: 15px;
+        }
+        .info {
+            margin: 12px auto;
+            color: #999999;
+            font-size: 12px;
+            line-height: 24px;
+            .mall {
+                margin: 0px 4px;
+            }
+        }
+        .clearfix {
+            zoom: 1;
+            .picwrap {
+                width: 120px;
+                float: right;
+                margin: -2px auto auto 10px;
+                overflow: hidden;
+                >img {
+                    width: 120px;
+                    height: 120px;
+                }
+            }
+            .conn {
+                font-size: 16px;
+                word-break: break-all;
+                line-height: 24px;
+                color: #606060;
+                padding-bottom: 20px;
+                >a {
+                    color: #4682c5;
+                    text-decoration: none;
+                    word-break: break-all;
+                }
+            }
+            &:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+        }
+        .golink {
+            >a {
+                display: block;
+                margin: 20px 10px;
+                background: #FF9000;
+                border-radius: 4px;
+                text-align: center;
+                font-size: 14px;
+                color: #ffffff;
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+    }
+    // 评论区
+    #comment {
+        background-color: #ffffff;
+        border-top: 1px solid #e0e4e7;
+        .tit {
+            font-size: 16px;
+            padding: 6px 8px;
+        }
+        .reply {
+            padding: 6px 8px;
+            .form {
+                border: 2px solid #ECEAE8;
+                border-radius: 2px;
+                padding: 4px 0 0 4px;
+                background-color: #fff;
+                position: relative;
+                width: 98%;
+                margin: 0px auto;
+                >textarea {
+                    width: 100%;
+                    resize: none;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    border: none;
+                    line-height: 22px;
+                    font-size: 14px;
+                    outline: 0;
+                    color: #666;
+                    height: 68px;
+                }
+                .ctrl {
+                    background-color: #fbfbfb;
+                    height: 36px;
+                    margin-left: -4px;
+                    border-top: solid 1px #f2f2f2;
+                    >input {
+                        position: absolute;
+                        right: -2px;
+                        bottom: -2px;
+                        background: #ff841d;
+                        border: none;
+                        border: 2px solid #ff841d;
+                        border-left: none;
+                        border-top: none;
+                        padding: 0px;
+                        width: 100px;
+                        height: 39px;
+                        color: #fff;
+                        outline: 0;
+                        border-radius: 0 0 2px 0;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

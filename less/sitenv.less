@@ -1,0 +1,48 @@
+@import "base2.less";
+
+
+/* 头部样式 */
+#header{
+    .icon-bar{
+        width: 50px;
+        height: 50px;
+        display: block; 
+        font-size:30px;
+        text-align:center;
+        line-height:50px;
+        color:#fff;
+    }
+    >h4{
+        flex:1;
+        color:#fff;
+        margin: 0;
+        line-height: 50px;
+        text-align: center;
+    }
+}
+/* 商城列表 */
+#storelist{
+    background-color: #fff;
+    padding: 10px 45px;
+    >ul{
+        display: flex;
+        flex-wrap: wrap;
+        >li{
+            background-color: #f4f4f4;
+            border: 1px solid @border-color;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            >a{
+                display: block;
+                height:40px;
+                line-height: 20px;
+                padding:10px;
+                font-size: 14px;
+                >img{
+                    margin-right:5px;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商城列表</title>
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet/less" href="less/sitenv.less">
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <a href="index.html" class="icon-bar mui-icon mui-icon-back"></a>
+        <h4>商城导航</h4>
+        <a href="#" class="icon-app">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+    <section id="storelist">
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt=""> 京东商城
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt=""> 京东商城
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt=""> 京东商城
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt=""> 京东商城城
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt=""> 京东商
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt=""> 京东商
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt=""> 京东商
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt=""> 京东商
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt=""> 京东商
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="http://misc.manmanbuy.com/images/hzweb/360.png" alt=""> 京东商商
+                </a>
+            </li>
+        </ul>
+    </section>
+    <footer id="footer">
+        <div class="footeer-top">
+            <a href="#">
+						登录
+					</a>
+            <a href="#">
+						注册
+					</a>
+            <a href="#header">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" alt="">返回顶部
+            </a>
+        </div>
+        <div class="footer-bottom">
+        	<p><span>手机APP下载</span>慢慢买手机版 -- 掌上比价平台</p>
+         <p>m.manmanbuy.com  </p>
+        </div>
+    </footer>
+
+    
+	<script type="text/html" id="sitenavTpl">
+		{{each result value}}
+			<li>
+            <a href="{{value.navHref}}">
+               <img src="{{value.navImg}}" alt=""> {{value.navTitle}}
+            </a>
+         </li>
+		{{ /each}}
+	</script>
+	
+	<script src="lib/zepto/zepto.min.js"></script>
+	<script src="lib/artTemplate/template-web.js"></script>
+	<script src="js/sitenav.js"></script>
+</body>
+
+</html>

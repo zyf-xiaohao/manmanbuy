@@ -1,0 +1,48 @@
+/* 在coupon主页的样式去引入公共的样式文件 */
+@import 'base.less';
+/* 优惠券功能页面 */
+/* 主体部分区域 */
+#main {
+    background-color: #fff;
+    border: 1px solid @border-color;
+    padding-bottom: 25px;
+    ul {
+        // 伸缩布局
+        display: flex;
+         // 换行
+        flex-wrap: wrap;
+        li {
+            width: 33.33%;
+            padding: 5px 5px;
+            background-color: #fff;
+            a {
+                //转块级元素
+                display: block; 
+                //居中
+                text-align: center;
+                 // background-color: #eee;
+                border: 1px solid @border-color;
+                img {
+                    width: 100px;
+                    height: 100px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
+
+/* 导航栏区域 */
+#nav {
+    height: 36px;
+    line-height: 36px;
+    background-color: #ebebeb;
+    border: 1px solid @border-color;
+    a {
+        color: #000;
+    }
+    .home {
+        margin-left: 10px;
+    }
+}
+

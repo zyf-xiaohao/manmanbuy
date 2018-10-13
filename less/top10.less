@@ -1,0 +1,154 @@
+@import 'base.less';
+
+#header {
+    display: block;
+    .title {
+        width: 100%;
+        height: 50px;
+        background-color: #ff841d;
+        border-bottom: 1px solid #e6e6e6;
+
+        .logo {
+            float: left;
+            padding: 12px;
+            margin-left: 5px;
+
+            a {
+                img {
+                    width: 185px;
+                    height: 25px;
+                }
+            }
+        }
+
+        .appdown {
+            float: right;
+            padding: 7px;
+
+            a {
+                img {
+                    width: 34px;
+                    height: 34px;
+                }
+            }
+        }
+    }
+
+    form {
+        width: 100%;
+        height: 50px;
+        background-color: #fff;
+        display: flex;
+        padding: 10px;
+        position: relative;
+
+        .searchtxt {
+            flex: 1;
+            height: 30px;
+            border-radius: 15px;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .searchbtn {
+            width: 63px;
+            height: 30px;
+            background-color: #ff841d;
+            border-radius: 15px;
+            border: none;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
+}
+
+#main {
+    .nav {
+        width: 100%;
+        height: 37px;
+        padding-left: 8px;
+        border-bottom: 1px solid #ccc;
+
+        a {
+            display: inline-block;
+            font-size: 14px;
+            line-height: 37px;
+        }
+    }
+
+    .content {
+        .title {
+            height: 40px;
+            border: 1px solid #ccc;
+            margin: 10px 5px;
+            line-height: 40px;
+            padding-left: 10px;
+            color: #874604;
+        }
+
+        ul {
+            padding: 0px 10px;
+
+            li {
+
+                a {
+                    display: block;
+                    height: 40px;
+                    line-height: 40px;
+                    color: #000;
+                    border-bottom: 1px solid #ccc;
+                    font-weight: bold;
+                    position: relative;
+                    i{
+                    	position: absolute;
+                    	font-weight: normal;
+                    	color: #777;
+                    	right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer {
+    .foot_top {
+        display: flex;
+        width: 100%;
+        height: 34px;
+        margin-top: 25px;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+
+        a {
+            flex: 1;
+            box-sizing: border-box;
+            border-right: 1px solid #c4c4c4;
+            text-align: center;
+            line-height: 34px;
+            font-size: 14px;
+
+            &:last-child {
+                border-right: none;
+            }
+
+            img {
+                vertical-align: middle;
+                margin-top: -5px;
+                margin-right: 2px;
+            }
+        }
+    }
+
+    .footer {
+        text-align: center;
+        padding: 15px;
+
+        p {
+            margin-bottom: 0px;
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+}

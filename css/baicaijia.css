@@ -1,0 +1,412 @@
+/* 公共变量 */
+html {
+  font-size: 100px;
+}
+body {
+  font-size: 0.16rem;
+}
+/* 样式重置 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /*在移动端设置盒模型border-box 为了防止元素加边框或者padding出现水平滚动条*/
+  box-sizing: border-box;
+  /* 去除移动端按住元素的时候会出现高亮背景色 */
+  -webkit-tap-highlight-color: transparent;
+  /* 去掉所有移动端内边框 */
+  outline: none;
+}
+a {
+  color: #666;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+input {
+  border: 0;
+}
+img {
+  /* 解决图片底部3px的间隙 为了让图片的对齐方式和文本一致*/
+  vertical-align: middle;
+}
+i {
+  font-style: normal;
+}
+/* 公共样式 */
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/* 头部样式 */
+#header {
+  position: relative;
+  background-color: #fe4a65;
+}
+#header > h4 {
+  text-align: center;
+  margin: 0px;
+  line-height: 45px;
+  color: #fff;
+  font-weight: normal;
+}
+#header .fa-search {
+  display: block;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+}
+/* 头部 */
+#header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 44px;
+  z-index: 999;
+  background-color: #fe4a65;
+  padding: 8px 10px;
+  display: flex;
+}
+#header > .logo {
+  display: block;
+  color: #fff;
+  line-height: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+#header > .search {
+  flex: 1;
+  margin-left: 10px;
+}
+#header > .search > form > input {
+  background-color: #fff;
+  text-align: left;
+  font-size: 14px;
+  height: 26px;
+}
+#header > .main-cat {
+  display: block;
+  width: 28px;
+  height: 28px;
+  color: #fff;
+  text-align: center;
+}
+#header > .main-cat > i {
+  font-weight: bold;
+  line-height: 28px;
+}
+/* 主体 */
+#main {
+  padding-top: 44px;
+  /* 导航部分 */
+  /* 超人气榜 */
+  /* 实时优惠 */
+}
+#main > #nav .mui-row {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+#main > #nav .mui-row .mui-col-xs-3 .mui-table-view-cell .mui-navigate-right {
+  text-align: center;
+}
+#main > #nav .mui-row .mui-col-xs-3 .mui-table-view-cell .mui-navigate-right > i {
+  display: block;
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  line-height: 51px;
+  font-size: 24px;
+  color: #fff;
+  margin: 0px auto 10px;
+}
+#main > #nav .mui-row .mui-col-xs-3 .mui-table-view-cell .mui-navigate-right > span {
+  font-size: 12px;
+}
+#main > #nav .mui-row .mui-col-xs-3 .mui-table-view-cell .mui-navigate-right::after {
+  display: none;
+}
+#main > #nav .mui-row .mui-col-xs-3:nth-child(1) .mui-table-view-cell .mui-navigate-right i {
+  background-color: #ffc151;
+}
+#main > #nav .mui-row .mui-col-xs-3:nth-child(2) .mui-table-view-cell .mui-navigate-right i {
+  background-color: #fe4a65;
+}
+#main > #nav .mui-row .mui-col-xs-3:nth-child(3) .mui-table-view-cell .mui-navigate-right i {
+  background-color: #ff7692;
+}
+#main > #nav .mui-row .mui-col-xs-3:nth-child(4) .mui-table-view-cell .mui-navigate-right i {
+  background-color: #a992ff;
+}
+#main > #hot {
+  width: 100%;
+  height: 193px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+#main > #hot .title {
+  padding: 10px 10px 5px 10px;
+}
+#main > #hot .title > h4 {
+  float: left;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666;
+  border-left: 3px solid #fe4a65;
+  padding-left: 10px;
+}
+#main > #hot .title > a {
+  display: block;
+  float: right;
+}
+#main > #hot .title > a > i {
+  font-size: 12px;
+  line-height: 16px;
+}
+#main > #hot .content {
+  margin-top: 5px;
+}
+#main > #hot .content .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+#main > #hot .content .swiper-container .swiper-slide {
+  width: auto;
+  padding: 0px 10px;
+}
+#main > #hot .content .swiper-container .swiper-slide ul {
+  width: 928px;
+}
+#main > #hot .content .swiper-container .swiper-slide ul li {
+  float: left;
+  width: 106px;
+  height: 160px;
+  overflow: hidden;
+  margin-right: 10px;
+  position: relative;
+}
+#main > #hot .content .swiper-container .swiper-slide ul li > a {
+  display: block;
+}
+#main > #hot .content .swiper-container .swiper-slide ul li > a > img {
+  width: 106px;
+  height: 106px;
+}
+#main > #hot .content .swiper-container .swiper-slide ul li > a > p {
+  font-size: 12px;
+  color: #666;
+  height: 14px;
+  white-space: nowrap;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+#main > #hot .content .swiper-container .swiper-slide ul li > a > .info {
+  color: #fe4a65;
+  line-height: 18px;
+  height: 18px;
+  font-size: 16px;
+}
+#main > #hot .content .swiper-container .swiper-slide ul li > a > .info > i {
+  font-size: 11px;
+  color: #ccc;
+}
+#main > #hot .content .swiper-container .swiper-slide ul li > a > .info > del {
+  font-size: 11px;
+  color: #ccc;
+}
+#main > #hot .content .swiper-container .swiper-slide ul li > a > .info > em {
+  font-size: 12px;
+}
+#main > #hot .content .swiper-container .swiper-slide ul li > div {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#main > #hot .content .swiper-container .swiper-slide ul li > div > a {
+  width: 106px;
+  height: 151px;
+}
+#main > #discounts {
+  width: 100%;
+  background-color: #fff;
+}
+#main > #discounts .title {
+  padding: 10px 10px 5px 10px;
+}
+#main > #discounts .title > h4 {
+  float: left;
+  font-size: 14px;
+  line-height: 16px;
+  color: #666;
+  border-left: 3px solid #fe4a65;
+  padding-left: 10px;
+}
+#main > #discounts .title > span {
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 3px;
+  padding: 0 5px;
+  background: #ffe5ec;
+  color: #fe4a65;
+  float: left;
+  height: 16px;
+  margin-left: 9px;
+  margin-top: 4px;
+}
+#main > #discounts .content ul .item {
+  white-space: normal;
+  width: 48%;
+  margin: 0px 3px 10px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+#main > #discounts .content ul .item a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#main > #discounts .content ul .item .cover {
+  width: 100%;
+}
+#main > #discounts .content ul .item .cover span {
+  position: absolute;
+  top: 0px;
+  right: 4px;
+  background-color: #fe4a65;
+  padding: 0px 5px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 12px;
+}
+#main > #discounts .content ul .item .cover img {
+  width: 176px;
+  height: 176px;
+  vertical-align: middle;
+}
+#main > #discounts .content ul .item .title {
+  font-size: 12px;
+  word-break: break-all;
+  white-space: nowrap;
+  color: #777;
+  padding: 0px;
+  margin-top: 4px;
+}
+#main > #discounts .content ul .item .info {
+  font-size: 14px;
+  color: #fe4a65;
+}
+#main > #discounts .content ul .item .info i {
+  color: #a3a3a3;
+  font-size: 12px;
+}
+#main > #discounts .content ul .item .info del {
+  color: #a3a3a3;
+  font-size: 12px;
+}
+#main > #discounts .content ul .item .info .sold {
+  font-size: 12px;
+  float: right;
+}
+#main > #discounts .content ul .item .info .sold i span {
+  display: none;
+}
+#main > #discounts .content ul .item .info .sold b {
+  color: #a3a3a3;
+  font-weight: normal;
+}
+/* 顶部菜单 */
+.top-menu {
+  position: fixed;
+  top: 44px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: none;
+}
+.top-menu.top-menu-show {
+  display: block;
+}
+.top-menu > .mask {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+.top-menu > .menu-content {
+  position: absolute;
+  z-index: 2;
+  background-color: #fff;
+  width: 100%;
+  padding-bottom: 22px;
+}
+.top-menu > .menu-content > ul {
+  text-align: center;
+  padding-bottom: 27px;
+}
+.top-menu > .menu-content > ul li {
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+  height: 51px;
+  border-bottom: #eee 1px solid;
+  border-right: #eee 1px solid;
+}
+.top-menu > .menu-content > ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 51px;
+  color: #333;
+  font-size: 14px;
+}
+.top-menu > .menu-content > .up-menu {
+  display: block;
+  width: 120px;
+  height: 25px;
+  border-radius: 1px;
+  border: #ff7f90 1px solid;
+  text-align: center;
+  color: #ff7f90;
+  font-size: 13px;
+  line-height: 24px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+/* 置顶 */
+#gotop {
+  position: fixed;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  top: 553px;
+  right: 8px;
+  text-align: center;
+}
+#gotop .iconfont {
+  line-height: 44px;
+  font-size: 16px;
+}

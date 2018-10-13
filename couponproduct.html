@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>肯德基优惠券</title>
+    <!-- 1.导入mui.css文件 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <!-- 2.导入轮播图插件 -->
+    <link rel="stylesheet" href="lib/swiper/css/swiper.min.css">
+    <!-- 3.导入字体图标 -->
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <!-- 4.导入自己写的less文件 -->
+    <link rel="stylesheet/less" href="less/couponproduct.less">
+    <!-- 5.引入less.js的编译器文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 遮罩层和轮播图大盒子  -->
+    <div class="bigSwiper" style="display: none;">
+        <!-- 遮罩层 -->
+        <div class="mask"></div>
+        <!-- 轮播图 -->
+        <div class="bigbox">
+            <div class="box">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="http://img13.360buyimg.com/n2/jfs/t20677/13/749624456/170058/19c03e6f/5b165733N31e3119d.jpg"
+                                alt="">
+                        </div>
+                    </div>
+                    <!-- 上一页下一页 -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 关闭按钮 -->
+        <div class="close">
+            <a href="javascript:hideClick()">X</a>
+        </div>
+    </div>
+    <!-- 头部区域 -->
+    <header id="header">
+        <!-- 图标栏 -->
+        <a href="coupon.html" class="fa fa-angle-left"></a>
+        <!-- 优惠券 -->
+        <h4>肯德基优惠券</h4>
+        <!-- APP下载 -->
+        <a href="#">
+            <img src="images/header_app.png" alt="">
+        </a>
+    </header>
+    <!-- 主体部分区域 -->
+    <main id="main">
+        <!-- 优惠券标题 -->
+        <div class="title">
+            --点餐前出示手机中的优惠券,即可享受优惠--
+        </div>
+        <!-- 优惠券列表 -->
+        <div class="coupon-list">
+            <ul class="mui-table-view" id="ul">
+                <li class="mui-table-view-cell mui-media">
+                    <a href="javascript:;" class="left">
+                        <img class="mui-media-object mui-pull-left" src="http://img13.360buyimg.com/n2/jfs/t20677/13/749624456/170058/19c03e6f/5b165733N31e3119d.jpg">
+                    </a>
+                    <a href="#" class="right">
+                        <div class="mui-media-body">
+                            <div class="product-name">
+                                <p>肯德基KFC50现金卡代金券优惠券折扣官方电子卡 自动发货 全国通用</p>
+                            </div>
+                            <div class="product-price">
+                                <span>￥49.00</span>
+                            </div>
+                            <div class="product-info mui-clearfix">
+                                <span class="mui-pull-left">有效期至10月31日</span>
+                            </div>
+                        </div>
+                    </a>
+                    <i class="mui-navigate-right"></i>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <!-- 底部区域 -->
+    <footer id="footer">
+        <!-- 标题 -->
+        <div class="title">
+            <ul>
+                <li>
+                    <a href="#" class="login">登录</a>
+                </li>
+                <li>
+                    <a href="#" class="register">注册</a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-arrow-up"></i>返回顶部
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 内容 -->
+        <div class="content">
+            <p>
+                <a href="#" class="mobile-app">手机APP下载</a>
+                <a href="#" class="slowly-buy">慢慢买手机版</a>-- 掌上比价平台
+            </p>
+            <p>
+                m.manmanbuy.com
+            </p>
+        </div>
+    </footer>
+
+    <!-- 准备模板 -->
+    <!-- 列表模板 -->
+    <script type="text/html" id="couponListTpl">
+        {{each result as value i}}
+        <li class="mui-table-view-cell mui-media">
+            <a href="javascript:showClick()" class="left">
+                {{@value.couponProductImg}}
+            </a>
+            <a href="#" class="right">
+                <div class="mui-media-body">
+                    <div class="product-name">
+                        <p>{{value.couponProductName}}</p>
+                    </div>
+                    <div class="product-price">
+                        <span>{{value.couponProductPrice}}</span>
+                    </div>
+                    <div class="product-info mui-clearfix">
+                        <span class="mui-pull-left">{{value.couponProductTime}}</span>
+                    </div>
+                </div>
+            </a>
+            <i class="mui-navigate-right"></i>
+        </li>
+        {{/each}}
+    </script>
+    <!-- 轮播图模板 -->
+    <script type="text/html" id="couponImgTpl">
+        <% for(var i=0 ;i<3; i++){ %>
+              <div class="swiper-slide">
+                  {{ each result as value }}
+                      {{@value.couponProductImg}}
+                  {{ /each}}
+              </div>
+        <% } %>
+    </script>
+
+    <!-- 1.导入mui.js文件 -->
+    <script src="lib/mui/js/mui.js"></script>
+    <!-- 2.导入zepto.js文件 -->
+    <script src="lib/zepto/zepto.min.js"></script>
+    <!-- 3.导入轮播图插件 -->
+    <script src="lib/swiper/js/swiper.min.js"></script>
+    <!-- 4.导入模板文件 -->
+    <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 5.导入自己写的js文件 -->
+    <script src="js/couponroduct.js"></script>
+</body>
+
+</html>

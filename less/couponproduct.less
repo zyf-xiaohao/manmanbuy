@@ -1,0 +1,131 @@
+@import 'base.less';
+/* 肯德基优惠券页面 */
+
+/* 主体区域部分 */
+#main {
+    background-color: #fff;
+    .title {
+        font-size: 14px;
+        text-align: center;
+        color: #999;
+        padding: 6px 0px;
+    }
+    .coupon-list {
+        >ul {
+            >li {
+                // 伸缩布局
+                display: flex;
+                .left {
+                    >img {
+                        width: 100px;
+                        height: 100px;
+                         // 最大宽度
+                        max-width: 100px;
+                        margin-right: 0;
+                    }
+                }
+                .right {
+                    flex: 1;
+                    margin-left: 0;
+                    .product-name {
+                        >p {
+                            // 注意:  white-space: nowrap 规定段落中的文本不进行换行
+                            white-space: normal;
+                            color: #000;
+                        }
+                    }
+                    .product-price {
+                        color: #d10311;
+                        font-weight: bold;
+                        margin-top: 10px;
+                    }
+                    .product-info {
+                        color: #ff841d;
+                        font-size: 12px;
+                        line-height: 40px;
+                        >span {
+                            line-height: 40px;
+                        }
+                    }
+                }
+                .mui-navigate-right {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
+
+html,
+body {
+    height: 100%;
+    padding: 0;
+}
+
+/* 遮罩层和轮播图大盒子 */
+.bigSwiper {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 998;
+    /* 遮罩层 */
+    .mask {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        opacity: 0.4;
+        background-color: #000;
+    }
+    /* 轮播图大盒子 */
+    .bigbox {
+        width: 300px;
+        height: 200px;
+        .box {
+            height: 100%;
+            position: relative;
+            top: 50%;
+            left: 60%;
+            transform: translateX(-50%);
+            .swiper-container {
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                z-index: 999;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        width: 160px;
+                        height: 160px;
+                        >img {
+                            margin-top: 50px;
+                            width: 160px;
+                            height: 160px;
+                        }
+                    }
+                }
+                /* 下一页 */ 
+                .swiper-button-next {
+                    width: 40px;
+                    height: 50px;
+                    border-radius: 10px;
+                    background-color: rgba(0, 0, 0, .1);
+                }
+                /* 上一页 */ 
+                .swiper-button-prev {
+                    width: 40px;
+                    height: 50px;
+                    border-radius: 10px;
+                    background-color: rgba(0, 0, 0, .1);
+                }
+            }
+        }
+    }
+    .close {
+        font-size: 30px;
+        opacity: .1;
+        position: absolute;
+        top: 155px;
+        right: 116px;
+    }
+}

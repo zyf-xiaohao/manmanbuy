@@ -1,0 +1,160 @@
+/* 定义全局变量 */
+/* 公共的样式放到base.less里面 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 防止边框padding超出页面宽度出现滚动条 */
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #5a5a5a;
+  text-decoration: none;
+  /*一般移动端清除a的点击高亮  透明就表示去掉*/
+  -webkit-tap-highlight-color: transparent;
+}
+input {
+  border: none;
+  outline: none;
+  /*清除移动端默认的表单样式*/
+  -webkit-appearance: none;
+}
+img {
+  /* 解决图片3px的间距 */
+  vertical-align: middle;
+}
+/* 公共样式*/
+.layout {
+  max-width: 620px;
+  background-color: #fff;
+  /* header part*/
+  /* footer part*/
+}
+.layout #header {
+  background-color: #ff841d;
+  display: flex;
+}
+.layout #header .logo {
+  flex: 1;
+  display: block;
+  padding: 12px;
+  margin-left: 5px;
+}
+.layout #header .logo img {
+  height: 25px;
+}
+.layout #header .app {
+  width: 48px;
+  display: block;
+  padding: 7px;
+}
+.layout #header .app img {
+  width: 34px;
+}
+.layout #footer {
+  background-color: #efeff4;
+}
+.layout #footer .footer-top {
+  display: flex;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.layout #footer .footer-top a {
+  display: block;
+  text-align: center;
+  line-height: 36px;
+  font-size: 14px;
+}
+.layout #footer .footer-top a:nth-of-type(-n+2) {
+  flex: 1;
+  border-right: 1px solid #ccc;
+}
+.layout #footer .footer-top a:last-of-type {
+  width: 40%;
+}
+.layout #footer .footer-bottom {
+  padding: 15px 0;
+  text-align: center;
+}
+.layout #footer .footer-bottom p {
+  margin-bottom: 0;
+}
+.layout #footer .footer-bottom p a:first-of-type {
+  color: red;
+}
+.layout {
+  /* main part */
+}
+.layout #main {
+  padding-bottom: 30px;
+  background-color: #f2f2f2;
+  /* 搜索框部分*/
+  /* 内容部分 */
+}
+.layout #main .search {
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+}
+.layout #main .search input {
+  flex: 1;
+  height: 30px;
+  margin-bottom: 0;
+  text-align: left;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+}
+.layout #main .search button {
+  width: 63px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #ff841d;
+  color: #fff;
+  font-size: 16px;
+  line-height: 30px;
+  padding: 0;
+}
+.layout #main .category-content {
+  background-color: #ebebeb;
+  padding: 5px;
+}
+.layout #main .category-content .container {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 0 #ccc;
+}
+.layout #main .category-content .container ul > li {
+  background-color: #ebebeb;
+  border-bottom: 1px solid #ccc;
+}
+.layout #main .category-content .container ul > li a {
+  font-weight: bold;
+}
+.layout #main .category-content .container ul > li .mui-collapse-content {
+  padding: 0;
+}
+.layout #main .category-content .container ul > li .mui-collapse-content ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.layout #main .category-content .container ul > li .mui-collapse-content ul > li {
+  width: 33.333%;
+  background-color: #fff;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.layout #main .category-content .container ul > li .mui-collapse-content ul > li:nth-of-type(-n+3) {
+  border-top: 1px solid #ccc;
+}
+.layout #main .category-content .container ul > li .mui-collapse-content ul > li:nth-of-type(3n+1) {
+  border-left: 1px solid #ccc;
+}
+.layout #main .category-content .container ul > li .mui-collapse-content ul > li a {
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #000;
+}

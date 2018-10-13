@@ -1,0 +1,139 @@
+/* 公共变量 */
+@main-color: #ff841d;
+@border-color: #ccc;
+@a-color: #5a5a5a;
+html{
+    font-size: 100px;
+}
+body{
+    font-size: 0.16rem;
+    min-width: 300px;
+    //也可以缩小100倍写0.16rem font-size: 0.16rem;
+}
+/* 样式重置 */
+* {
+    margin: 0rem;
+    padding: 0rem;
+   /*在移动端设置盒模型border-box 为了防止元素加边框或者padding出现水平滚动条*/
+    box-sizing: border-box;
+   /* 去除移动端按住元素的时候会出现高亮背景色 */
+    -webkit-tap-highlight-color: transparent;
+   /* 去掉所有移动端内边框 */
+    outline: none;
+}
+a {
+    color: @a-color;
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+input {
+    border: 0;
+}
+img {
+   /* 解决图片底部0.03rem的间隙 为了让图片的对齐方式和文本一致*/
+    vertical-align: middle;
+}
+i {
+    font-style: normal;
+}
+// 公共样式 
+    #header {
+    display: flex;
+    background-color: @main-color;
+    .logo {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        img {
+            max-width: 1.85rem;
+            max-height: 0.25rem;
+            margin-left: 0.15rem;
+       }
+   }
+    .app-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 0.48rem;
+        height: 0.48rem;
+        img {
+            max-width: 0.34rem;
+            max-height: 0.34rem;
+       }
+   }
+}
+#search {
+    background-color: #fff;
+    .search {
+        padding: 0.1rem;
+        position: relative;
+        .search-text {
+            background-color: #f1f1f1;
+            height: 0.3rem;
+            border-radius: 0.15rem;
+            padding: 0 0 0 0.2rem;
+            text-align: left;
+            color: @a-color;
+            margin: 0;
+       }
+        .search-btn {
+            width: 0.63rem;
+            height: 0.3rem;
+            background-color: @main-color;
+            position: absolute;
+            border-radius: 0.15rem;
+            top: 0.1rem;
+            right: 0.1rem;
+            color: #fff;
+            line-height: 0.3rem;
+            margin: 0;
+            padding: 0;
+            font-size: 0.16rem;
+            font-weight: 700;
+       }
+   }
+}
+#tools {
+    ul{
+        display: flex;
+        border-top: 0.01rem solid @border-color;
+        border-bottom: 0.01rem solid @border-color;
+        li{
+            flex: 1;
+            text-align: center;
+            &:nth-child(n+2){
+                border-left: 0.01rem solid @border-color;
+           }
+            >a{
+                display: block;
+                height: 0.34rem;
+                line-height: 0.34rem;
+                color: @a-color;
+                i{
+                    font-size: 0.16rem;
+               }
+           }
+       }
+   }
+}
+#footer{
+    background-color: #efefef;
+    padding: 0.2rem;
+    text-align: center;
+    >div{
+        font-size: 0.12rem;
+        a{
+            display: inline;
+            color: red;
+       }
+        span{
+            color:@a-color;
+       }
+   }
+    p {
+        color:@a-color;
+   }
+}

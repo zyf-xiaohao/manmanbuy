@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>比价搜索商品详情页面</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./less/products.css">
+</head>
+
+<body>
+    <div class="layout">
+        <!-- 头部区域 -->
+        <header id="header">
+            <a href="index.html" class="logo">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+            <a href="#" class="app">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </header>
+        <!-- 主题区域 -->
+        <main id="main">
+            <!-- 搜索框 -->
+            <section class="search">
+                <input type="search" name="search" id="search" placeholder="请输入你想比价的商品">
+                <button type="button">搜索</button>
+            </section>
+            <!-- 内容区域 -->
+            <section class="product-content">
+                <div class="content-title mui-clearfix">
+                    <a class="title1" href="index.html">首页&nbsp;>&nbsp;</a>
+                    <a class="title2" href="#">全部分类&nbsp;>&nbsp;</a>
+                    <a class="title3" href="#">电视&nbsp;>&nbsp;</a>
+                    <button type="button">筛选</button>
+                </div>
+                <div class="content-display">
+                    <ul class="mui-table-view">
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                                <img class="mui-media-object mui-pull-left" src="http://www.zuyushop.com/ProPic/20188/small80/Thumb_2018080014213017317.jpg">
+                                <div class="mui-media-body">
+                                    <h4>九阳(Joyoung) JYW-T03 直饮式净水器 厨房净水设备</h4>
+                                    <span class="price">$99</span>
+                                    <p>
+                                        <span class="quote">3商城报价</span>
+                                        <span class="comment">有0人评价</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                                <img class="mui-media-object mui-pull-left" src="http://www.zuyushop.com/ProPic/20188/small80/Thumb_2018080014213017317.jpg">
+                                <div class="mui-media-body">
+                                    <h4>九阳(Joyoung) JYW-T03 直饮式净水器 厨房净水设备</h4>
+                                    <span class="price">$99</span>
+                                    <p>
+                                        <span class="quote">3商城报价</span>
+                                        <span class="comment">有0人评价</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mui-table-view-cell mui-media">
+                            <a href="javascript:;">
+                                <img class="mui-media-object mui-pull-left" src="http://www.zuyushop.com/ProPic/20188/small80/Thumb_2018080014213017317.jpg">
+                                <div class="mui-media-body">
+                                    <h4>九阳(Joyoung) JYW-T03 直饮式净水器 厨房净水设备</h4>
+                                    <span class="price">$99</span>
+                                    <p>
+                                        <span class="quote">3商城报价</span>
+                                        <span class="comment">有0人评价</span>
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="control">
+                    <div class="mui-content-padded">
+                        <ul class="mui-pager">
+                            <li id="preBtn">
+                                <a href="#">
+                                    上一页
+                                </a>
+                            </li>
+                            <li id="nextBtn">
+                                <a href="#">
+                                    下一页
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- 底部区域 -->
+        <footer id="footer">
+            <!-- footer 上部分 -->
+            <div class="footer-top">
+                <a href="#" class="login">登录</a>
+                <a href="#" class="register">注册</a>
+                <a href="#" class="backTop"><img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">回到顶部</a>
+            </div>
+            <!-- footer 下部分 -->
+            <div class="footer-bottom">
+                <p>
+                    <a href="#">手机app下载</a>
+                    <a href="#">慢慢买手机版</a>
+                    <span>-掌上比价平台</span>
+                </p>
+                <p>m.manmanbuy.com</p>
+            </div>
+        </footer>
+    </div>
+    <!-- 产品列表模板 -->
+    <script type="text/html" id="products-tpl">
+        {{ each result value }}
+        <li class="mui-table-view-cell mui-media">
+            <a href="productDetails.html?productId={{ value.productId }}">
+                <!-- <img class="mui-media-object mui-pull-left" src="{{ value.productImg }}"> -->
+                {{@ value.productImg }}
+                <div class="mui-media-body">
+                    <h4>{{ value.productName }}</h4>
+                    <span class="price">{{ value.productPrice }}</span>
+                    <p>
+                        <span class="quote">{{ value.productQuote }}</span>
+                        <span class="comment">{{ value.productCom }}</span>
+                    </p>
+                </div>
+            </a>
+        </li>
+        {{ /each }}
+    </script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./js/products.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+/* 公共变量 */
+@border-color: #c4c4c4;
+@a-color: #5a5a5a;
+@main-color: #f4483e;
+/* 样式重置 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /*在移动端设置盒模型border-box 为了防止元素加边框或者padding出现水平滚动条*/
+    box-sizing: border-box;
+    /* 去除移动端按住元素的时候会出现高亮背景色 */
+    -webkit-tap-highlight-color: transparent;
+    /* 去掉所有移动端内边框 */
+    outline: none;
+}
+
+a {
+    color: @a-color;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    border: 0;
+}
+
+img {
+    /* 解决图片底部3px的间隙 为了让图片的对齐方式和文本一致*/
+    vertical-align: middle;
+}
+
+i {
+    font-style: normal;
+}
+
+/* 公共样式 */
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+h4 {
+    margin: 0;
+}
+
+/* 头部区域 */
+#header {
+    background-color: @main-color;
+    position: relative;
+    .fa-angle-left {
+        display: block;
+        color: #fff;
+        position: absolute;
+        font-size: 30px;
+        left: 0;
+        top: 0;
+        width: 40px;
+        line-height: 43px;
+        text-align: center;
+    }
+    >h4 {
+        text-align: center;
+        color: #fff;
+        font-weight: normal;
+        line-height: 43px;
+    }
+    >a {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        >img {
+            width: 34px;
+            height: 34px;
+        }
+    }
+}
+#indexHeader {
+    background-color: @main-color;
+    height: 50px;
+    display: flex;
+    a.logo{
+        display: block;
+        padding: 12px;
+        flex: 1;
+        img {
+            width: 185px;
+            height: 25px;
+        }
+    }
+    a.download {
+        display: block;
+        padding: 7px;
+        img {
+            width: 34px;
+            height: 34px;
+        }
+    }
+}
+/* 底部区域 */
+#footer {
+    // border: 1px solid @border-color;
+    background-color: #fff; // 标题
+    .title {
+        background-color: #efefef;
+        border-top: 1px solid @border-color;
+        border-bottom: 1px solid @border-color;
+        height: 34px;
+        line-height: 34px;
+        margin-top: 25px;
+        ul {
+            display: flex;
+            >li {
+                width: 40%; 
+                // 相邻兄弟元素
+                &+li {
+                    border-left: 1px solid @border-color;
+                }
+                >a {
+                    font-size: 14px;
+                    display: block;
+                    text-align: center;
+                    .fa-arrow-up {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    } 
+    // 内容
+    .content {
+        text-align: center;
+        font-size: 12px;
+        padding: 15px 0;
+        color: @a-color;
+        background-color: #efefef;
+        .mobile-app {
+            color: @main-color;
+            font-weight: bold;
+        }
+        .slowly-buy {
+            color: #000;
+            font-weight: bold;
+        }
+        >p {
+            font-weight: bold;
+        }
+    }
+}

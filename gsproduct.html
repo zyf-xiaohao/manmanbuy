@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>凑单品</title>
+    <!-- 导入链接 -->
+    <link rel="stylesheet" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/cd.less">
+    <script src="lib/less/less.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+        <a href="index.html">
+            <</a> <h3>凑单品</h3>
+    </header>
+    <section id="hd">
+        <ul class="shop">
+            <li>
+                <a href="#" id=shopList>
+                    <select name="" id="name1">
+                        <option value="0">京东</option>
+                        <option value="1">一号店</option>
+                        <option value="2">天猫超市</option>
+                    </select>
+                </a>
+                <!-- <i class="fa fa-caret-down" id="pic1"></i> -->
+            </li>
+            <li>
+                <a href="#" id="icon">
+                    <select name="" id="area">
+                        <option value="0">华北</option>
+                        <option value="1">华东</option>
+                        <option value="2">华南</option>
+                        <option value="3">华中</option>
+                        <option value="4">西南</option>
+                        <option value="5">东北</option>
+                        <option value="6">西北</option>
+                    </select>
+                </a>
+                <!-- <i class="fa fa-caret-down" id="pic"></i> -->
+            </li>
+            <!-- <li>
+                <a href="#">1元
+                    <i class="fa fa-caret-down"></i>
+                </a>
+            </li> -->
+
+        </ul>
+        <div class="shop1">
+            <ul id="ul1">
+                <li>
+                    <a href="#">
+                        <!-- 京东 -->
+
+                    </a>
+                </li>
+                <li>
+                    <a href="#">一号店</a>
+                </li>
+                <li>
+                    <a href="#">天猫超市</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="select">
+            <ul class="list" id="ul2">
+                <li>
+                    <a href="#">京东
+                        <span>√</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">2
+                        <span>√</span>
+                    </a>
+
+
+                </li>
+                <li>
+                    <a href="#">2
+                        <span>√</span>
+                    </a>
+
+
+                </li>
+                <li>
+                    <a href="#">华中（湖北、河南等）
+                        <span>√</span>
+                    </a>
+
+
+                </li>
+                <li>
+                    <a href="#">西南（四川、云南等）
+                        <span>√</span>
+                    </a>
+
+
+                </li>
+                <li>
+                    <a href="#">东北（辽宁、吉林等）
+                        <span>√</span>
+                    </a>
+
+
+                </li>
+                <li>
+                    <a href="#">西北（宁夏、新疆等）
+                        <span>√</span>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="search">
+            <i class="fa fa-search"></i>
+        </div>
+    </section>
+    <main id="main">
+        <ul class="one">
+            <li>
+                <a href="#">
+                    <img src="http://img10.360buyimg.com/n7/jfs/t5653/200/1754716059/353311/f37a6dcb/59291e87N6294522d.jpg"
+                        alt="">
+                    <div class="two">
+                        <p>国产活性碳口罩成人儿童通用春夏秋冬口罩</p>
+                        <p>¥0.48</span></p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="http://img10.360buyimg.com/n7/jfs/t5653/200/1754716059/353311/f37a6dcb/59291e87N6294522d.jpg"
+                        alt="">
+                    <div class="two">
+                        <p>国产活性碳口罩成人儿童通用春夏秋冬口罩</p>
+                        <p>¥0.48</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="cd1.html">
+                    <img src="http://img10.360buyimg.com/n7/jfs/t5653/200/1754716059/353311/f37a6dcb/59291e87N6294522d.jpg"
+                        alt="">
+                    <div class="two">
+                        <p>国产活性碳口罩成人儿童通用春夏秋冬口罩</p>
+                        <p>¥0.48</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="http://img10.360buyimg.com/n7/jfs/t5653/200/1754716059/353311/f37a6dcb/59291e87N6294522d.jpg"
+                        alt="">
+                    <div class="two">
+                        <p>国产活性碳口罩成人儿童通用春夏秋冬口罩</p>
+                        <p>¥0.48</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </main>
+    <script type="text/html" id="tpl">
+        
+            {{each result value}}
+            <li> 
+                <a href="cd1.html">
+                    <img src="{{value.productImg}}" alt="">
+                    <div class="two">
+                        <p>{{value.productName}}</p>
+                        <p>{{value.productPrice}}</p>
+                    </div>
+                    
+                </a>
+            </li>
+            {{/each}}
+        
+    </script>
+    <!-- 创建两个模板 -->
+    <!-- <script id="tpl1" type="text/html">
+        {{each result value}}
+        <li>
+            <a href="#">{{value.shopName}}
+                <span style="display:none;">{{value.shopId}}</span>
+            </a>
+            </li>
+        {{/each}}
+    </script>
+
+    <script id="tpl2" type="text/html">
+        {{each result value}}
+            <li>
+                <a href="#">{{value.areaName}}
+                    <span>√</span>
+                </a>
+                <span style="display:none;">{{value.areaId}}</span>
+            </li>
+        {{/each}}
+    </script> -->
+
+
+
+
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/cd.js"></script>
+</body>
+
+</html>

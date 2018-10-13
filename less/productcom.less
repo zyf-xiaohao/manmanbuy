@@ -1,0 +1,175 @@
+@import "base2.less";
+
+/* 头部样式 */
+
+#header {
+    .icon-logo {
+        flex: 1;
+        padding: 12px;
+        >img {
+            max-height: 25px;
+            max-width: 185px;
+        }
+    }
+}
+
+
+/* 搜索样式 */
+
+#form {
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    >form {
+        width: 100%;
+        position: relative;
+        >input {
+            width: 100%;
+            height: 30px;
+            border-radius: 15px;
+            text-align: left;
+            margin: 0;
+            padding: 0 20px;
+        }
+        >button {
+            font-size: 16px;
+            border-radius: 15px;
+            height: 30px;
+            line-height: 30px;
+            width: 63px;
+            background-color: @main-color;
+            padding: 0;
+            border: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+
+/* <!-- 商品详情区域 --> */
+
+#commodity {
+    .nav-place {
+        height: 38px;
+        line-height: 38px;
+        font-size: 14px;
+        padding-left: 8px;
+        border-top: 1px solid #ebebeb;
+        border-bottom: 1px solid @border-color;
+        background-image: linear-gradient(to bottom, #fff, #ebebeb);
+    }
+    .detail {
+        padding: 10px 10px 0 10px;
+        background-color: #fff;
+        .detail-header {
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .detail-footer {
+            margin-top: 10px;
+            padding-bottom: 20px;
+            >ul {
+                display: flex;
+                >li {
+                    flex: 1;
+                    height: 24px;
+                    line-height: 24px;
+                    color: #575757;
+                    >em {
+                        font-size: 14px;
+                        color: #666;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* <!-- 商品评价区域 --> */
+
+#comment {
+    padding-top: 20px;
+    .comment-nav {
+        border-top: 1px solid #c14d00;
+        border-bottom: 1px solid #c14d00;
+        /* background-color:#ffbb00; */
+        background-image: linear-gradient(to bottom, #ffd050, #ffbb00);
+        >ul {
+            display: flex;
+            >li {
+                flex: 1;
+                line-height: 34px;
+                height: 34px;
+                font-size: 15px;
+                text-align: center;
+                &+li {
+                    border-left: 1px solid #c14d00;
+                }
+                &.active {
+                    background-image: linear-gradient(to bottom, #ffa632, #ff9000);
+                }
+            }
+        }
+    }
+    .comment-mian {
+        .comment-mian-nav {
+            padding-top: 5px;
+            >ul {
+                display: flex;
+                >li {
+                    flex: 1;
+                    text-align: center;
+                    >a {
+                        display: inline-block;
+                        padding: 0 10px;
+                        line-height: 30px;
+                        font-size: 14px;
+                    }
+                    &.active {
+                        >a {
+                            border-bottom: 1px solid red;
+                        }
+                    }
+                }
+            }
+        }
+        .comment-mian-tit {
+            padding: 10px 10px 0 10px;
+            background-color: #fff;
+            border-bottom:1px solid @border-color;
+            .top {
+                display: flex;
+                >div {
+                    flex: 1;
+                    color: #999;
+                    font-size: 14px;
+                    height: 18px;
+                    &.fivestars {
+                        max-width: 80px;
+                        height: 18px;
+                        background-size: 16px 16px;
+                        background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg>");
+                    }
+                    &.right {
+                        text-align: right;
+                    }
+                }
+            }
+            .text {
+                color: #000;
+                font-size: 14px;
+                line-height: 22px;
+                padding-top: 5px;
+            }
+            >p {
+                font-size: 14px;
+                line-height: 22px;
+                margin: 5px 0 0 0;
+            }
+        }
+    }
+}

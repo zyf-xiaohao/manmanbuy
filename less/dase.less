@@ -1,0 +1,101 @@
+/* 公共变量 */
+
+@main-color: #ff841d;
+@border-color: #ccc;
+@a-color: #666;
+
+/* 样式重置 */
+html{
+    font-size: 100px;
+}
+body{
+    font-size:16px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /*在移动端设置盒模型border-box 为了防止元素加边框或者padding出现水平滚动条*/
+    box-sizing: border-box;
+    /* 去除移动端按住元素的时候会出现高亮背景色 */
+    -webkit-tap-highlight-color: transparent;
+    /* 去掉所有移动端内边框 */
+    outline: none;
+}
+
+a {
+    color: @a-color;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    border: 0;
+}
+
+img {
+    /* 解决图片底部3px的间隙 为了让图片的对齐方式和文本一致*/
+    vertical-align: middle;
+}
+
+i {
+    font-style: normal;
+}
+
+/* 头部样式 */
+#header{
+    background-color: @main-color;
+    display: flex;
+    .icon-app{
+        width: 50px;
+        height: 50px;
+        display: block;
+        padding: 8px;
+        >img{
+            width: 34px;
+        }
+    }
+}
+/* 底部样式 */
+#footer{
+    padding: 20px 0;
+    .footeer-top{
+       border-top: 1px solid @border-color; 
+       border-bottom: 1px solid @border-color;
+       line-height:35px;
+       display: flex;
+       >a{
+            display: block;
+            width: 30%;
+            font-size:14px;
+            text-align:center;
+            border-right: 1px solid @border-color;
+            >img{
+                width: 15px;
+                height: 15px;
+                margin-top:-5px;
+               
+            }
+            &:last-child{
+                width: 40%;
+                border:0;
+            }
+       } 
+    }
+    .footer-bottom{
+        padding-top: 15px;
+        >p{
+            margin:0;
+            font-size:12px;
+            text-align:center;
+            line-height:14px;
+            >span{
+                color:red;
+                margin-right:5px;
+            }
+        }
+    }
+}
